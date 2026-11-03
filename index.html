@@ -30,12 +30,6 @@
   .topbar-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;}
   .title-block h1{margin:0;font-size:19px;letter-spacing:.03em;font-weight:700;}
   .title-block .sub{margin-top:2px;font-size:13px;color:#c9d4f2;font-style:italic;}
-  /* barra de abas entre apps (Monitoramento / Farol de Vendas) */
-  .app-tabs{display:flex;align-items:center;background:#0E1B2C;padding:0 16px;overflow-x:auto;}
-  .app-tab{display:flex;align-items:center;gap:6px;color:#8a96a8;text-decoration:none;padding:13px 16px;font-size:13px;font-weight:600;border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s;}
-  .app-tab:hover{color:#fff;}
-  .app-tab.active{color:#fff;border-bottom-color:var(--teal);}
-
   .meta{text-align:right;}
   .update-badge{text-align:right;}
   .update-badge .lbl{font-size:10.5px;color:#b9c6ec;text-transform:uppercase;letter-spacing:.05em;}
@@ -88,7 +82,7 @@
   .export-btn{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:7px 14px;border-radius:20px;font-size:12.5px;font-weight:600;cursor:pointer;}
   .export-btn:hover{background:var(--paper);border-color:var(--navy-3);}
   @media print{
-    .no-print, .topbar, .app-tabs, .search-wrap, .fleet-groups,
+    .no-print, .topbar, .search-wrap, .fleet-groups,
     .side-grid, .banner, .footer, .cards{display:none !important;}
     body{background:#fff;}
     .table-card{box-shadow:none;border:1px solid #ccc;}
@@ -133,10 +127,6 @@
 </head>
 <body>
 <div id="appRoot">
-<div class="app-tabs">
-  <a href="https://portalgtf.github.io/" class="app-tab">🗺️ Monitoramento</a>
-  <a href="#" class="app-tab active">⚙️ Farol de Vendas</a>
-</div>
 <div class="topbar">
   <div class="topbar-row">
     <div class="title-block" style="display:flex;align-items:center;gap:12px;">
@@ -788,7 +778,7 @@ let fleet = { ...DEFAULT_FLEET };
 let usingDemoAuth = false;
 
 function backendConfigured(){
-  return CONFIG.APPS_SCRIPT_URL && !CONFIG.APPS_SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbxbxxNWlr8dh4VCbykg9kCIwJpbt-yH8n_Ecs9wIDvrtbyZNId79b4SagfW7FpBkv4fQw/exec");
+  return CONFIG.APPS_SCRIPT_URL && !CONFIG.APPS_SCRIPT_URL.includes("COLE_AQUI");
 }
 async function apiPost(payload, timeoutMs){
   const controller = new AbortController();
